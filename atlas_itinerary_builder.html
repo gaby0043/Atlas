@@ -3,70 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itinerary Builder</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #35424a;
-            color: #ffffff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        #main {
-            padding: 20px;
-            background: white;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #35424a;
-            color: #ffffff;
-        }
-    </style>
+    <title>Travel Itinerary Builder</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Itinerary Builder</h1>
-    </header>
+    <div class="topbar">
+        <h1>Travel Itinerary Builder</h1>
+    </div>
     <div class="container">
-        <div id="main">
-            <h2>Create Your Itinerary</h2>
-            <form id="itinerary-form">
-                <label for="destination">Destination:</label><br>
-                <input type="text" id="destination" name="destination" required><br><br>
-                <label for="start-date">Start Date:</label><br>
-                <input type="date" id="start-date" name="start-date" required><br><br>
-                <label for="end-date">End Date:</label><br>
-                <input type="date" id="end-date" name="end-date" required><br><br>
-                <input type="submit" value="Generate Itinerary">
-            </form>
-            <div id="output"></div>
+        <div class="week-grid">
+            <!-- Week grid goes here -->
+        </div>
+        <div class="timeline">
+            <!-- Timeline goes here -->
+        </div>
+        <div class="itinerary-cards">
+            <!-- Itinerary cards with details go here -->
+        </div>
+        <form id="itinerary-form">
+            <!-- Form for itinerary input goes here -->
+        </form>
+        <div class="slideshow">
+            <!-- Slideshow for images goes here -->
+        </div>
+        <div class="image-zones">
+            <!-- Zones for images go here -->
         </div>
     </div>
-    <footer>
-        <p>&copy; 2026 Itinerary Builder. All rights reserved.</p>
-    </footer>
-    <script>
-        document.getElementById('itinerary-form').onsubmit = function(event) {
-            event.preventDefault();
-            const destination = document.getElementById('destination').value;
-            const startDate = document.getElementById('start-date').value;
-            const endDate = document.getElementById('end-date').value;
-            const output = document.getElementById('output');
-            output.innerHTML = `<h3>Your Itinerary:</h3><p><strong>Destination:</strong> ${destination}</p><p><strong>Start Date:</strong> ${startDate}</p><p><strong>End Date:</strong> ${endDate}</p>`;
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+<style>
+/* CSS for styling goes here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.topbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+.container {
+    padding: 20px;
+}
+.week-grid {
+    /* Styles for week grid */
+}
+.timeline {
+    /* Styles for timeline */
+}
+.itinerary-cards {
+    /* Styles for itinerary cards */
+}
+.slideshow {
+    /* Styles for slideshow */
+}
+.image-zones {
+    /* Styles for image zones */
+}
+</style>
+
+<script>
+// Complete JavaScript with functionality goes here
+function loadTimeZoneData() {
+    // Code to handle timezone support
+}
+function detectConflicts() {
+    // Code to detect conflicts
+}
+function exportToPDF() {
+    // Code for PDF export
+}
+function buildItinerary() {
+    // Code to build itinerary
+}
+function presentClient() {
+    // Code for client presentations
+}
+</script>
